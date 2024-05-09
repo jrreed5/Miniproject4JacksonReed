@@ -1,14 +1,17 @@
+<!--INF601 - Advanced Programming in Python-->
+<!--Jackson Reed-->
+<!--Mini Project 4-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Django Project{% endblock %}</title>
+    <title>{% block title %}OpinioNation{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">My Project</a>
+        <a class="navbar-brand" href="/">OpinioNation</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,9 +26,6 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'form' %}">Form</a>
                 </li>
                 <li class="nav-item">
@@ -35,6 +35,11 @@
                     <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
             </ul>
+            <!-- Add Logout button -->
+            <form class="form-inline my-2 my-lg-0" action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+            </form>
         </div>
     </nav>
 

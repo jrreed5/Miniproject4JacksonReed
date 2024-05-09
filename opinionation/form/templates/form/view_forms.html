@@ -1,0 +1,22 @@
+<!--INF601 - Advanced Programming in Python-->
+<!--Jackson Reed-->
+<!--Mini Project 4-->
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-4">
+        <h1>Submitted Forms</h1>
+        {% if forms %}
+            <ul class="list-group">
+                {% for form in forms %}
+                    <li class="list-group-item">
+                        <h2>{{ form.name }}</h2>
+                        <p>Email: {{ form.email }}</p>
+                        <p>Message: {{ form.message }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No forms submitted yet.</p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -12,4 +12,7 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
+    path('submit-form/', views.form_submit, name='form_submit'),
+    path('view-forms/', views.view_submitted_forms, name='view_forms'),
+    path('login-required/', views.login_required_view, name='login_required'),
 ]
