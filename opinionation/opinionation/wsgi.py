@@ -1,5 +1,8 @@
+# INF601 - Advanced Programming in Python
+# Jackson Reed
+# Mini Project 4
 """
-WSGI config for mysite project.
+WSGI config for opinionation project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +14,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'opinionation.settings')
 
 application = get_wsgi_application()
