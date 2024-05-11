@@ -4,13 +4,14 @@
 
 from django.urls import path
 from . import views
+from .views import CustomLoginView
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('form/', views.form, name='form'),
     path('register/', views.register, name='register'),
-    path('login/', views.user_login, name='login'),
+    path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', views.user_logout, name='logout'),
     path('submit-form/', views.form_submit, name='form_submit'),
     path('view-forms/', views.view_submitted_forms, name='view_forms'),

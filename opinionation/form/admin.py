@@ -3,6 +3,6 @@
 # Mini Project 4
 
 from django.contrib import admin
-from .models import MyModel
+from .models import SubmittedFormData
 
-admin.site.register(MyModel)
+admin.site.register(SubmittedFormData)
